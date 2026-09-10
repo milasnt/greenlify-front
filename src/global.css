@@ -30,9 +30,9 @@
   --shadow-green: 0 10px 30px rgba(0, 168, 107, 0.15);
   --shadow-purple: 0 10px 30px rgba(139, 92, 246, 0.15);
 
-  --radius-custom-sm: 0.8rem;
-  --radius-custom-md: 1.2rem;
-  --radius-custom-lg: 1.8rem;
+  --radius-custom-sm: .8rem;
+  --radius-custom-md: .2rem;
+  --radius-custom-lg: .8rem;
 }
 
 @layer base {
