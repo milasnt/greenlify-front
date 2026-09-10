@@ -31,10 +31,6 @@
   --shadow-custom-md: 0 10px 30px rgba(0, 0, 0, 0.06);
   --shadow-green: 0 10px 30px rgba(0, 168, 107, 0.15);
   --shadow-purple: 0 10px 30px rgba(139, 92, 246, 0.15);
-
-  --radius-custom-sm: .8rem;
-  --radius-custom-md: .2rem;
-  --radius-custom-lg: .8rem;
 }
 
 @layer base {
