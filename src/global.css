@@ -7,6 +7,8 @@
   --color-bg: #ffffff;
   --color-bg-soft: #ededee;
   --color-bg-card: #ffffff;
+  --background-image-gradient-green: linear-gradient(135deg, #00a86b, #4caf50);
+  --background-image-gradient-purple: linear-gradient(135deg, #8b5cf6, #a78bda);
 
   --color-green-primary: #00a86b;
   --color-green-light: #4caf50;
