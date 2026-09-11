@@ -1,7 +1,7 @@
 import Section from "../../components/Section";
 import Hero from "../../components/Hero";
-import { FaGithub, FaLinkedinIn, FaSeedling } from "react-icons/fa";
-import { FaUserGroup } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaSeedling, FaLeaf, FaLightbulb, FaUsers } from "react-icons/fa";
+import { FaUserGroup, FaShieldHeart } from "react-icons/fa6";
 import Card from "../../components/Card";
 
 import imgCamila from "../../assets/img/integrantes/img-camila.jpeg";
@@ -116,6 +116,67 @@ export default function Integrantes() {
                     ))}
                 </div>
             </Section>
+            
+            <Section variant="secondary">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="mb-16 text-center">
+                        <h2 className="text-[3.6rem] font-bold text-text-main">
+                            Nossos <span className="text-green-primary">Valores</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-4 gap-8 max-[1200px]:grid-cols-2 max-[480px]:grid-cols-1">
+                        <Card center>
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
+                                <FaLeaf />
+                            </div>
+                            <h3 className="mb-3 text-[1.7rem] font-bold text-text-main">
+                                Sustentabilidade
+                            </h3>
+                            <p className="text-[1.4rem] leading-[1.6] text-text-secondary">
+                                Pequenas ações geram grandes impactos.
+                            </p>
+                        </Card>
+
+                        <Card center>
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
+                                <FaLightbulb />
+                            </div>
+                            <h3 className="mb-3 text-[1.7rem] font-bold text-text-main">
+                                Inovação
+                            </h3>
+                            <p className="text-[1.4rem] leading-[1.6] text-text-secondary">
+                                Tecnologia aplicada ao impacto ambiental.
+                            </p>
+                        </Card>
+
+                        <Card center>
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
+                                <FaUsers />
+                            </div>
+                            <h3 className="mb-3 text-[1.7rem] font-bold text-text-main">
+                                Colaboração
+                            </h3>
+                            <p className="text-[1.4rem] leading-[1.6] text-text-secondary">
+                                Comunidade unida pela mudança.
+                            </p>
+                        </Card>
+
+                        <Card center>
+                            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
+                                <FaShieldHeart />
+                            </div>
+                            <h3 className="mb-3 text-[1.7rem] font-bold text-text-main">
+                                Transparência
+                            </h3>
+                            <p className="text-[1.4rem] leading-[1.6] text-text-secondary">
+                                Dados claros e acessíveis.
+                            </p>
+                        </Card>
+                    </div>
+                </div>
+            </Section>
+
         </>
     );
 }
