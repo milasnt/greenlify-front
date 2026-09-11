@@ -21,11 +21,11 @@ export default function Button({
 }: ButtonProps) {
 
     const baseStyles =
-        "block w-fit text-center no-underline font-semibold cursor-pointer transition duration-300 whitespace-nowrap outline-none";
+        "block w-fit text-center no-underline font-semibold rounded-3xl transition duration-300 whitespace-nowrap outline-none";
 
     const variantStyles = {
         primary: "bg-gradient-green text-bg hover:brightness-110",
-        secondary: "bg-gradient-purple text-bg hover:brightness-110",
+        secondary: "bg-bg border border border-gradient-green text-green-primary hover:bg-gradient-green hover:text-bg",
     };
 
     const sizeStyles = {

@@ -112,14 +112,16 @@ export default function Dashboard() {
             </Card>
 
             <Card className="flex flex-col gap-4">
-              <div className="flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full bg-gradient-green text-bg">
-                <FaRoute size={18} />
+              <div className="flex items-center gap-4"> 
+                <div className="flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full bg-gradient-green text-bg">
+                  <FaRoute size={18} />
+                </div>
+                
+                <span className="text-[1.3rem] text-text-secondary">
+                  CO₂
+                </span>
               </div>
-
-              <span className="text-[1.3rem] text-text-secondary">
-                CO₂
-              </span>
-
+              
               <h2 className="text-[3.2rem] font-bold text-text-main">
                 28kg
               </h2>

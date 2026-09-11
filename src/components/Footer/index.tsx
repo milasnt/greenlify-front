@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="max-w-[38rem] text-[1.5rem] leading-[1.7] text-text-secondary">
+            <p className="max-w-152 text-[1.5rem] leading-[1.7] text-text-secondary">
               Gamificação + Sustentabilidade + Inteligência Artificial.
               O próximo nível do impacto ambiental.
             </p>

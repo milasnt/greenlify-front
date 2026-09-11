@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 interface HeroProps {
-    children: ReactNode;
+    children?: ReactNode;
     visual?: ReactNode;
     badge?: ReactNode;
     title: ReactNode;
@@ -35,10 +35,10 @@ export default function Hero({
             <div
               className="
                 flex items-center gap-[0.8rem]
-                rounded-custom-lg
+                rounded-2xl
                 border border-[rgba(0,168,107,0.12)]
                 bg-green-ultra-light
-                px-[1.8rem] py-4
+                px-6 py-6
                 text-[1.3rem] font-semibold
                 text-green-primary
               "
