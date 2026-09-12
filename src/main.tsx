@@ -11,12 +11,16 @@ import Home from './routes/Home';
 import Error from './routes/Error';
 import App from './App';
 import NossaSolucao from './routes/NossaSolucao';
+import Missoes from './routes/Missoes';
+import Perfil from './routes/Perfil';
 
 export const router = createBrowserRouter([
   { path: "/", element: <App />, errorElement: <Error/>, children: [
         { path: "", element: <Home /> },
         { path: "sobre", element: <Sobre /> },
         { path: "nossasolucao", element: <NossaSolucao /> },  
+        { path: "missoes", element: <Missoes /> },
+        { path: "perfil", element: <Perfil /> },
         { path: "integrantes", element: <Integrantes /> },
         { path: "contato", element: <Contato /> },
         { path: "faq", element: <FAQ /> },  
