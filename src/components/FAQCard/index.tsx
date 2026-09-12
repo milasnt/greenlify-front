@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 interface FAQCardProps {
     question: string;
-    answer: string;
+    answer: ReactNode;
 }
 
 export default function FAQCard({
