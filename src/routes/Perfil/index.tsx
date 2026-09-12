@@ -1,0 +1,311 @@
+import Section from "../../components/Section";
+import Hero from "../../components/Hero";
+import Card from "../../components/Card";
+import Button from "../../components/Button";
+import ProfileHeader from "../../components/ProfileHeader";
+import ProfileStat from "../../components/ProfileStat";
+import RankingTabs from "../../components/RankingTabs";
+import RankingTable from "../../components/RankingTable";
+import { Link } from "react-router";
+import { FaLeaf, FaTrophy, FaStar, FaListCheck, FaFire, FaChartLine, FaUsers} from "react-icons/fa6";
+
+export default function Perfil() {
+    return (
+        <>
+            <Section>
+                <Hero
+                    variant="internal"
+                    badge={<FaLeaf />}
+                    title={<>Meu <span className="font-bold text-green-primary">Perfil</span></>}
+                    text="Acompanhe sua evolução na Greenlify, visualize suas conquistas e veja o impacto gerado pelas suas ações sustentáveis."
+                    visual={
+                        <div className="flex h-48 w-48 items-center justify-center rounded-[3rem] border border-black/5 bg-bg-card shadow-custom-md">
+                            <FaLeaf className="text-[4.5rem] text-green-primary" />
+                        </div>
+                    }
+                />
+            </Section>
+
+            <Section>
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="flex items-start gap-8">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
+                            1
+                        </div>
+
+                        <div className="w-full">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                                Perfil sustentável
+                            </h2>
+
+                            <p className="mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                O perfil sustentável reúne as principais informações sobre
+                                sua participação na Greenlify, permitindo acompanhar sua
+                                pontuação, XP, nível de contribuição e evolução.
+                            </p>
+
+                            <ProfileHeader
+                                nome="Camila"
+                                nivel="Contribuidora"
+                                xp={780}
+                                proximoNivelXp={1000}
+                                pontos={1250}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            <Section variant="primary">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="flex items-start gap-8">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
+                            2
+                        </div>
+
+                        <div className="w-full">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                                Seus resultados
+                            </h2>
+
+                            <p className="mb-12 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                Visualize os principais resultados obtidos através das
+                                missões realizadas e acompanhe sua evolução sustentável.
+                            </p>
+
+                            <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                                <ProfileStat
+                                    icon={<FaTrophy />}
+                                    label="Pontos acumulados"
+                                    value="1.250"
+                                    descricao="Pontuação obtida nas missões."
+                                />
+
+                                <ProfileStat
+                                    icon={<FaStar />}
+                                    label="XP acumulado"
+                                    value="780"
+                                    descricao="Experiência conquistada."
+                                />
+
+                                <ProfileStat
+                                    icon={<FaListCheck />}
+                                    label="Missões concluídas"
+                                    value="18"
+                                    descricao="Missões realizadas com sucesso."
+                                />
+
+                                <ProfileStat
+                                    icon={<FaLeaf />}
+                                    label="Impacto ambiental"
+                                    value="Alto"
+                                    descricao="Impacto gerado pelas suas ações."
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            <Section>
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="flex items-start gap-8">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
+                            3
+                        </div>
+
+                        <div className="w-full">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                                Sua evolução
+                            </h2>
+
+                            <p className="mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                Acompanhe seu progresso e veja como sua participação
+                                contribui para sua evolução dentro da Greenlify.
+                            </p>
+
+                            <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
+                                <Card center>
+                                    <FaFire className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
+
+                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
+                                        Streak atual
+                                    </h3>
+
+                                    <strong className="mb-3 block text-[2.8rem] font-bold text-green-primary">
+                                        4 meses
+                                    </strong>
+
+                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
+                                        Você mantém sua participação em missões mensais.
+                                    </p>
+                                </Card>
+
+                                <Card center>
+                                    <FaChartLine className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
+
+                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
+                                        Nível de contribuição
+                                    </h3>
+
+                                    <strong className="mb-3 block text-[2.8rem] font-bold text-green-primary">
+                                        Contribuidora
+                                    </strong>
+
+                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
+                                        Seu nível aumenta conforme o XP acumulado.
+                                    </p>
+                                </Card>
+
+                                <Card center>
+                                    <FaUsers className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
+
+                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
+                                        Ranking mensal
+                                    </h3>
+
+                                    <strong className="mb-3 block text-[2.8rem] font-bold text-green-primary">
+                                        #8
+                                    </strong>
+
+                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
+                                        Sua posição atual entre os participantes.
+                                    </p>
+                                </Card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            <Section variant="primary">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="flex items-start gap-8">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
+                            4
+                        </div>
+
+                        <div className="w-full">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                                Rankings
+                            </h2>
+
+                            <p className="mb-4 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                A Greenlify possui diferentes rankings para acompanhar o
+                                desempenho dos participantes em diferentes contextos.
+                            </p>
+
+                            <p className="mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                O ranking mensal considera o desempenho durante o mês
+                                atual, enquanto o ranking all time considera o histórico
+                                de participação. Já o ranking de grupos permite comparar
+                                o desempenho coletivo.
+                            </p>
+
+                            <Card full>
+                                <RankingTabs activeTab={"mensal"} onChange={function (): void {
+                                    throw new Error("Function not implemented.");
+                                } } />
+
+                                <div className="mt-8">
+                                    <RankingTable items={[]} />
+                                </div>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            <Section>
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <div className="flex items-start gap-8">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
+                            5
+                        </div>
+
+                        <div className="w-full">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                                Desempenho mensal
+                            </h2>
+
+                            <p className="mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                                Ao final de cada mês, você pode visualizar um resumo do
+                                seu desempenho, reunindo os principais resultados
+                                alcançados durante o período.
+                            </p>
+
+                            <Card full>
+                                <div className="grid grid-cols-3 gap-10 max-[800px]:grid-cols-1">
+                                    <div>
+                                        <span className="mb-2 block text-[1.4rem] text-text-secondary">
+                                            Pontos no mês
+                                        </span>
+
+                                        <strong className="text-[2.6rem] font-bold text-text-main">
+                                            420
+                                        </strong>
+                                    </div>
+
+                                    <div>
+                                        <span className="mb-2 block text-[1.4rem] text-text-secondary">
+                                            Missões concluídas
+                                        </span>
+
+                                        <strong className="text-[2.6rem] font-bold text-text-main">
+                                            7
+                                        </strong>
+                                    </div>
+
+                                    <div>
+                                        <span className="mb-2 block text-[1.4rem] text-text-secondary">
+                                            Posição final
+                                        </span>
+
+                                        <strong className="text-[2.6rem] font-bold text-green-primary">
+                                            #8
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <div className="mt-10 flex justify-center">
+                                    <Button variant="secondary" size="md">
+                                        Compartilhar resumo
+                                    </Button>
+                                </div>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+
+            <Section>
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                    <Card center full>
+                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            Continue sua <span className="text-green-primary">evolução</span>
+                        </h2>
+
+                        <p className="mx-auto mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                            Realize novas missões para aumentar sua pontuação,
+                            conquistar XP e melhorar sua posição no ranking.
+                        </p>
+
+                        <div className="flex justify-center gap-6 max-[480px]:flex-col">
+                            <Link to="/nossa-solucao/missoes">
+                                <Button size="lg">
+                                    Ver Missões
+                                </Button>
+                            </Link>
+
+                            <Link to="/nossa-solucao">
+                                <Button variant="secondary" size="lg">
+                                    Conhecer a solução
+                                </Button>
+                            </Link>
+                        </div>
+                    </Card>
+                </div>
+            </Section>
+        </>
+    );
+}
