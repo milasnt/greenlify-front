@@ -27,7 +27,7 @@ export default function Menu() {
             </li>
 
             <li>
-              <Link to="/nossa-solucao" className="block w-full whitespace-nowrap rounded-lg px-4 py-3 text-[1.4rem] font-medium text-text-secondary transition duration-300 hover:bg-green-ultra-light hover:text-green-primary">
+              <Link to="/nossasolucao" className="block w-full whitespace-nowrap rounded-lg px-4 py-3 text-[1.4rem] font-medium text-text-secondary transition duration-300 hover:bg-green-ultra-light hover:text-green-primary">
                 Nossa solução
               </Link>
             </li>
