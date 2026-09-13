@@ -1,10 +1,23 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
 import ContactForm from "../../components/Forms";
-import { FaEnvelope, FaGithub, FaLocationDot, FaSeedling } from "react-icons/fa6";
+import { FaEnvelope, FaGithub, FaLocationDot, FaSeedling, FaCircleCheck } from "react-icons/fa6";
+
+interface ContatoLocationState {
+    submitted?: boolean;
+}
 
 export default function Contato() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const submitted = Boolean((location.state as ContatoLocationState | null)?.submitted);
+
+    function handleSubmitSuccess() {
+        navigate("/contato", { state: { submitted: true }, replace: true });
+    }
+
     return (
         <>
             <Section variant="primary">
@@ -97,12 +110,30 @@ export default function Contato() {
                     </div>
 
                     <Card>
-                        <h2 className="mb-8 text-[2.2rem] font-bold text-text-main">
-                            Envie sua Mensagem
-                        </h2>
+                        {submitted ? (
+                            <div className="flex flex-col items-center justify-center py-10 text-center">
+                                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-ultra-light">
+                                    <FaCircleCheck className="text-[3rem] text-green-primary" />
+                                </div>
 
-                        <ContactForm />
-                        
+                                <h2 className="mb-4 text-[2.2rem] font-bold text-text-main">
+                                    Mensagem enviada!
+                                </h2>
+
+                                <p className="max-w-120 text-[1.4rem] leading-[1.6] text-text-secondary">
+                                    Obrigado por entrar em contato. Nossa equipe responderá em
+                                    até 24 horas úteis.
+                                </p>
+                            </div>
+                        ) : (
+                            <>
+                                <h2 className="mb-8 text-[2.2rem] font-bold text-text-main">
+                                    Envie sua Mensagem
+                                </h2>
+
+                                <ContactForm onSubmitSuccess={handleSubmitSuccess} />
+                            </>
+                        )}
                     </Card>
                 </div>
             </Section>
