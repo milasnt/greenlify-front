@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 import Button from "../Button";
 
 interface MissionCardProps {
+    id: string;
     titulo: string;
     descricao: string;
     impacto: "Baixo" | "Médio" | "Alto";
@@ -13,6 +15,7 @@ interface MissionCardProps {
 }
 
 export function MissionCard({
+    id,
     titulo,
     descricao,
     impacto,
@@ -21,6 +24,12 @@ export function MissionCard({
     xp,
     icon,
 }: MissionCardProps) {
+    const navigate = useNavigate();
+
+    function handleVerMissao() {
+        navigate(`/missoes/${id}`);
+    }
+
     return (
         <Card className="flex h-full flex-col">
             <div className="mb-6 flex items-center justify-between">
@@ -76,7 +85,11 @@ export function MissionCard({
             </div>
 
             <div className="mt-auto">
-                <Button variant="secondary" full>
+                <Button
+                    variant="secondary"
+                    full
+                    onClick={handleVerMissao}
+                >
                     Ver missão
                 </Button>
             </div>
