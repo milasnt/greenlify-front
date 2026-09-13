@@ -63,14 +63,14 @@ export default function Perfil() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             1
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Perfil sustentável
                             </h2>
 
@@ -97,14 +97,14 @@ export default function Perfil() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             2
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Seus resultados
                             </h2>
 
@@ -114,7 +114,7 @@ export default function Perfil() {
                             </p>
 
                             {isLoading ? (
-                                <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                                <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     {[1, 2, 3, 4].map((item) => (
                                         <div
                                             key={item}
@@ -123,7 +123,7 @@ export default function Perfil() {
                                     ))}
                                 </div>
                             ) : (
-                                <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                                <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     <ProfileStat
                                         icon={<FaTrophy />}
                                         label="Pontos acumulados"
@@ -159,14 +159,14 @@ export default function Perfil() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             3
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Sua evolução
                             </h2>
 
@@ -175,7 +175,7 @@ export default function Perfil() {
                                 contribui para sua evolução dentro da Greenlify.
                             </p>
 
-                            <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
+                            <div className="grid grid-cols-3 gap-6 max-[992px]:grid-cols-2 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <Card center>
                                     <FaFire className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
 
@@ -230,14 +230,14 @@ export default function Perfil() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             4
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Rankings
                             </h2>
 
@@ -269,14 +269,14 @@ export default function Perfil() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             5
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Desempenho mensal
                             </h2>
 
@@ -287,7 +287,7 @@ export default function Perfil() {
                             </p>
 
                             <Card full>
-                                <div className="grid grid-cols-3 gap-10 max-[800px]:grid-cols-1">
+                                <div className="grid grid-cols-3 gap-10 max-[992px]:gap-[2.5rem] max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     <div>
                                         <span className="mb-2 block text-[1.4rem] text-text-secondary">
                                             Pontos no mês
@@ -331,9 +331,9 @@ export default function Perfil() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <Card center full>
-                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                             Continue sua <span className="text-green-primary">evolução</span>
                         </h2>
 

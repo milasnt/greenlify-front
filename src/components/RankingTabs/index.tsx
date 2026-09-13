@@ -16,7 +16,7 @@ export default function RankingTabs({ defaultTab = "mensal", onChange }: Ranking
     }
 
     return (
-        <div className="mb-8 flex gap-2 rounded-2xl border border-border bg-bg-card p-2 max-[600px]:flex-col">
+        <div className="mb-8 flex gap-2 rounded-2xl border border-border bg-bg-card p-2 max-[768px]:gap-[1.6rem] max-[480px]:gap-[1.2rem] max-[480px]:flex-col">
             <button
                 type="button"
                 onClick={() => handleSelect("mensal")}

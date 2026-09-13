@@ -23,14 +23,14 @@ export default function NossaSolucao() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             1
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Como funciona
                             </h2>
 
@@ -41,7 +41,7 @@ export default function NossaSolucao() {
                                 plataforma.
                             </p>
 
-                            <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                            <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <Card center>
                                     <FaListCheck className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
 
@@ -102,14 +102,14 @@ export default function NossaSolucao() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             2
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Principais funcionalidades
                             </h2>
 
@@ -119,7 +119,7 @@ export default function NossaSolucao() {
                                 contínua de participação e evolução.
                             </p>
 
-                            <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                            <div className="grid grid-cols-3 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <Card center>
                                     <FaListCheck className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
 
@@ -205,14 +205,14 @@ export default function NossaSolucao() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             3
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Engajamento
                             </h2>
 
@@ -227,7 +227,7 @@ export default function NossaSolucao() {
                                 evoluindo dentro da plataforma.
                             </p>
 
-                            <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                            <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <Card center>
                                     <FaFire className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
 
@@ -285,9 +285,9 @@ export default function NossaSolucao() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <Card center full>
-                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                             Conheça a solução <span className="text-green-primary">na prática</span>
                         </h2>
 

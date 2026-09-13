@@ -4,7 +4,7 @@ import Card from "../Card";
 export default function Dashboard() {
   return (
     <div className="w-full cursor-pointer">
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-8 max-[768px]:gap-[1.6rem] max-[480px]:grid-cols-1">
         <Card className="flex flex-col gap-4">
           <div className="flex items-center gap-4">
             <div className="flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full bg-gradient-green text-bg">
@@ -45,7 +45,7 @@ export default function Dashboard() {
           </span>
         </Card>
 
-        <Card className="col-span-2 flex flex-col gap-8">
+        <Card className="col-span-2 flex flex-col gap-8 max-[768px]:col-span-2 max-[480px]:col-span-1">
           <div className="flex items-center gap-4">
             <div className="flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full bg-gradient-green text-bg">
               <FaEarthAmericas size={18} />
@@ -70,7 +70,7 @@ export default function Dashboard() {
             Impacto do Mês
           </p>
 
-          <div className="grid grid-cols-3 gap-[1.6rem]">
+          <div className="grid grid-cols-3 gap-[1.6rem] max-[768px]:grid-cols-1">
             <Card className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
                 <div className="flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full bg-linear-to-br from-sky-400 to-blue-500 text-bg">

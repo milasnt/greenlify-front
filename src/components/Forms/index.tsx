@@ -27,35 +27,35 @@ export default function Forms({ onSubmitSuccess }: FormsProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-                <label htmlFor="nome" className="text-[1.4rem] font-semibold text-text-main">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-6 max-[480px]:gap-[1.6rem]">
+            <div className="flex flex-col gap-2 max-[480px]:gap-[0.8rem]">
+                <label htmlFor="nome" className="text-[1.4rem] font-semibold text-text-main max-[480px]:text-[1.2rem]">
                     Nome Completo
                 </label>
                 <input
                     id="nome"
                     type="text"
                     placeholder="Nome completo"
-                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary"
+                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary max-[480px]:p-[1.4rem] max-[480px]:text-[1.4rem]"
                     {...register("nome", {
                         required: "Informe seu nome completo.",
                         minLength: { value: 3, message: "O nome deve ter pelo menos 3 caracteres." },
                     })}
                 />
                 {errors.nome && (
-                    <span className="text-[1.3rem] text-red-500">{errors.nome.message}</span>
+                    <span className="text-[1.3rem] text-red-500 max-[480px]:text-[1.3rem]">{errors.nome.message}</span>
                 )}
             </div>
 
-            <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-[1.4rem] font-semibold text-text-main">
+            <div className="flex flex-col gap-2 max-[480px]:gap-[0.8rem]">
+                <label htmlFor="email" className="text-[1.4rem] font-semibold text-text-main max-[480px]:text-[1.2rem]">
                     Email
                 </label>
                 <input
                     id="email"
                     type="email"
                     placeholder="seu@email.com"
-                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary"
+                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary max-[480px]:p-[1.4rem] max-[480px]:text-[1.4rem]"
                     {...register("email", {
                         required: "Informe seu email.",
                         pattern: {
@@ -65,44 +65,44 @@ export default function Forms({ onSubmitSuccess }: FormsProps) {
                     })}
                 />
                 {errors.email && (
-                    <span className="text-[1.3rem] text-red-500">{errors.email.message}</span>
+                    <span className="text-[1.3rem] text-red-500 max-[480px]:text-[1.3rem]">{errors.email.message}</span>
                 )}
             </div>
 
-            <div className="flex flex-col gap-2">
-                <label htmlFor="assunto" className="text-[1.4rem] font-semibold text-text-main">
+            <div className="flex flex-col gap-2 max-[480px]:gap-[0.8rem]">
+                <label htmlFor="assunto" className="text-[1.4rem] font-semibold text-text-main max-[480px]:text-[1.2rem]">
                     Assunto
                 </label>
                 <input
                     id="assunto"
                     type="text"
                     placeholder="Sobre o que você quer falar?"
-                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary"
+                    className="w-full rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary max-[480px]:p-[1.4rem] max-[480px]:text-[1.4rem]"
                     {...register("assunto", {
                         required: "Informe o assunto.",
                         minLength: { value: 3, message: "O assunto deve ter pelo menos 3 caracteres." },
                     })}
                 />
                 {errors.assunto && (
-                    <span className="text-[1.3rem] text-red-500">{errors.assunto.message}</span>
+                    <span className="text-[1.3rem] text-red-500 max-[480px]:text-[1.3rem]">{errors.assunto.message}</span>
                 )}
             </div>
 
-            <div className="flex flex-col gap-2">
-                <label htmlFor="mensagem" className="text-[1.4rem] font-semibold text-text-main">
+            <div className="flex flex-col gap-2 max-[480px]:gap-[0.8rem]">
+                <label htmlFor="mensagem" className="text-[1.4rem] font-semibold text-text-main max-[480px]:text-[1.2rem]">
                     Mensagem
                 </label>
                 <textarea
                     id="mensagem"
                     placeholder="Escreva sua mensagem aqui..."
-                    className="min-h-48 w-full resize-y rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] leading-[1.6] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary"
+                    className="min-h-48 w-full resize-y rounded-lg border border-border bg-bg px-5 py-4 text-[1.4rem] leading-[1.6] text-text-main outline-none transition duration-300 placeholder:text-text-secondary focus:border-green-primary max-[480px]:p-[1.4rem] max-[480px]:text-[1.4rem] max-[480px]:min-h-48"
                     {...register("mensagem", {
                         required: "Escreva sua mensagem.",
                         minLength: { value: 10, message: "A mensagem deve ter pelo menos 10 caracteres." },
                     })}
                 />
                 {errors.mensagem && (
-                    <span className="text-[1.3rem] text-red-500">{errors.mensagem.message}</span>
+                    <span className="text-[1.3rem] text-red-500 max-[480px]:text-[1.3rem]">{errors.mensagem.message}</span>
                 )}
             </div>
 

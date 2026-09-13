@@ -150,14 +150,14 @@ export default function Missoes() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             1
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Missões mensais
                             </h2>
 
@@ -166,7 +166,7 @@ export default function Missoes() {
                                 e são cumpridas a partir das missões contínuas realizadas.
                             </p>
 
-                            <div className="grid grid-cols-2 gap-6 max-[700px]:grid-cols-1">
+                            <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 {missoesMensais.map((missao) => (
                                     <MissaoMensal
                                         key={missao.titulo}
@@ -182,14 +182,14 @@ export default function Missoes() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             2
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Missões disponíveis
                             </h2>
 
@@ -199,7 +199,7 @@ export default function Missoes() {
                             </p>
 
                             {isLoading ? (
-                                <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
+                                <div className="grid grid-cols-3 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     {[1, 2, 3, 4, 5, 6].map((item) => (
                                         <div
                                             key={item}
@@ -208,7 +208,7 @@ export default function Missoes() {
                                     ))}
                                 </div>
                             ) : (
-                                <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
+                                <div className="grid grid-cols-3 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     {missoes.map((missao) => (
                                         <MissionCard
                                             key={missao.id}
@@ -229,14 +229,14 @@ export default function Missoes() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                             3
                         </div>
 
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                                 Como funciona uma missão
                             </h2>
 
@@ -247,7 +247,7 @@ export default function Missoes() {
                                 progresso das metas mensais.
                             </p>
 
-                            <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                            <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <div className="rounded-2xl border border-border bg-bg-card p-8 text-center shadow-custom-sm">
                                     <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light">
                                         <span className="text-[1.8rem] font-bold text-green-primary">

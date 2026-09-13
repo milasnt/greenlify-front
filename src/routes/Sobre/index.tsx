@@ -18,20 +18,20 @@ export default function Sobre() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
-                    <div className="grid grid-cols-2 items-center gap-16">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
+                    <div className="grid grid-cols-2 items-center gap-16 max-[768px]:grid-cols-1">
                         <div>
                             <div className="mb-8 flex items-start gap-8">
                             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">1</div>
                                 <div>
-                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">Contexto</h2>
+                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Contexto</h2>
                                     <p className="mb-6 text-[1.6rem] leading-[1.7] text-text-secondary">A SoulUp é uma plataforma digital focada em engajamento e recompensas sustentáveis, criada a partir da integração entre a Prospera e a startup SoulPrime. Em parceria com a FIAP, a empresa propôs aos alunos o desenvolvimento de soluções reais para desafios existentes dentro da plataforma.</p>
                                     <p className="text-[1.6rem] leading-[1.7] text-text-secondary">Entre os desafios apresentados, nosso grupo escolheu desenvolver um sistema de gamificação sustentável capaz de incentivar ações ambientais dentro do aplicativo da SoulUp, utilizando mecanismos de pontuação, ranking e validação automatizada.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-8 ">
+                        <div className="grid grid-cols-2 gap-8 max-[768px]:grid-cols-1">
                             <Card className="flex items-center justify-center p-8">
                                 <img src="/img/img-fiap.jpeg" alt="FIAP" className="h-full w-full rounded-xl object-cover" />
                             </Card>
@@ -44,13 +44,13 @@ export default function Sobre() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="grid grid-cols-2 gap-16 max-[900px]:grid-cols-1">
                         <div>
                             <div className="flex items-start gap-8">
                                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">2</div>
                                 <div>
-                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">Desafio</h2>
+                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Desafio</h2>
                                     <p className="mb-6 text-[1.6rem] leading-[1.7] text-text-secondary">O principal objetivo do desafio era criar uma solução capaz de transformar ações sustentáveis em pontuações justas e comparáveis entre os usuários da plataforma.</p>
                                     <p className="mb-6 text-[1.6rem] leading-[1.7] text-text-secondary">Além disso, o sistema precisava resolver problemas importantes relacionados à escalabilidade, validação automática das ações, prevenção de fraudes e manutenção do engajamento contínuo dos usuários.</p>
                                     <p className="text-[1.6rem] leading-[1.7] text-text-secondary">Outro requisito do challenge era a utilização de vídeos como forma de comprovação das atividades realizadas, permitindo que as ações fossem analisadas automaticamente pela plataforma.</p>
@@ -62,8 +62,8 @@ export default function Sobre() {
                             <div className="flex items-start gap-8">
                                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">3</div>
                                 <div className="w-full">
-                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">Objetivos</h2>
-                                    <div className="grid grid-cols-2 gap-6 max-[600px]:grid-cols-1">
+                                    <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Objetivos</h2>
+                                    <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                         <Card center>
                                             <FaRobot className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
                                             <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">Validação Automatizada</h3>
@@ -96,16 +96,16 @@ export default function Sobre() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">4</div>
                         <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main">Solução</h2>
+                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Solução</h2>
                             <p className="mb-6 text-[1.6rem] leading-[1.7] text-text-secondary">A Greenlify funciona como um módulo integrado à SoulUp, no qual os usuários podem participar de missões sustentáveis dentro do aplicativo.</p>
                             <p className="mb-6 text-[1.6rem] leading-[1.7] text-text-secondary">As missões são divididas entre atividades contínuas e mensais. Após concluir uma ação, o usuário envia um vídeo como comprovação, que passa por um processo de validação automatizada utilizando inteligência artificial, análise comportamental e fingerprint de mídia. Com base no impacto ambiental da missão, na dificuldade da atividade e no resultado da validação, o sistema calcula a pontuação do usuário e atualiza o ranking da plataforma.</p>
                             <p className="mb-12 text-[1.6rem] leading-[1.7] text-text-secondary">Além disso, a solução também conta com um sistema de streak, compartilhamento de desempenho mensal, níveis de contribuição e um sistema de fingerprint que captura os uploads de fotos e vídeos enviados pelo usuário, incentivando o engajamento contínuo e reduzindo comportamentos fraudulentos dentro do aplicativo.</p>
 
-                            <div className="grid grid-cols-5 gap-6 max-[1100px]:grid-cols-3 max-[700px]:grid-cols-2 max-[480px]:grid-cols-1">
+                            <div className="grid grid-cols-5 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                 <Card center>
                                     <FaListCheck className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
                                     <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">Missões</h3>
@@ -142,9 +142,9 @@ export default function Sobre() {
             </Section>
 
             <Section>
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <Card center full>
-                        <h3 className="mb-6 text-[2.8rem] font-bold text-text-main">Veja o projeto <span className="text-green-primary">funcionando</span></h3>
+                        <h3 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Veja o projeto <span className="text-green-primary">funcionando</span></h3>
                         <p className="mx-auto mb-8 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">Explore as diferentes funcionalidades da plataforma através de demonstrações interativas.</p>
 
                         <div className="flex justify-center gap-6 max-[480px]:flex-col">
@@ -156,13 +156,13 @@ export default function Sobre() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="grid grid-cols-2 gap-16 max-[900px]:grid-cols-1">
                         <div>
                             <div className="flex items-start gap-8">
                                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">5</div>
                                 <div className="w-full">
-                                    <h2 className="mb-8 text-[2.8rem] font-bold text-text-main">Roadmap</h2>
+                                    <h2 className="mb-8 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Roadmap</h2>
                                     <Roadmap />
                                 </div>
                             </div>
@@ -171,9 +171,9 @@ export default function Sobre() {
                         <div>
                             <div className="flex items-start gap-8">
                             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">6</div><div className="w-full">
-                                    <h2 className="mb-8 text-[2.8rem] font-bold text-text-main">Tecnologias</h2>
+                                    <h2 className="mb-8 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Tecnologias</h2>
 
-                                    <div className="grid grid-cols-2 gap-6 max-[600px]:grid-cols-1">
+                                    <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                         <Card center>
                                             <FaCode className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
                                             <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">HTML</h3>

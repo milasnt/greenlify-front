@@ -81,10 +81,10 @@ export default function Integrantes() {
             </Section>
 
             <Section>
-                <div className="grid grid-cols-5 gap-8 max-[1200px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
+                <div className="grid grid-cols-5 gap-8 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                     {integrantes.map((integrante) => (
                         <Card key={integrante.rm} member>
-                            <div className="mx-auto mb-8 h-48 w-48 overflow-hidden rounded-full border-3 border-green-ultra-light shadow-custom-sm">
+                            <div className="mx-auto mb-8 h-48 w-48 overflow-hidden rounded-full border-3 border-green-ultra-light shadow-custom-sm max-[992px]:h-72 max-[992px]:w-72 max-[768px]:h-64 max-[768px]:w-64 max-[480px]:h-56 max-[480px]:w-56">
                                 <img src={integrante.foto} alt={`Foto de ${integrante.nome}`} className="h-full w-full object-cover" />
                             </div>
 
@@ -118,14 +118,14 @@ export default function Integrantes() {
             </Section>
             
             <Section variant="secondary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="mb-16 text-center">
                         <h2 className="text-[3.6rem] font-bold text-text-main">
                             Nossos <span className="text-green-primary">Valores</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-8 max-[1200px]:grid-cols-2 max-[480px]:grid-cols-1">
+                    <div className="grid grid-cols-4 gap-8 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                         <Card center>
                             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
                                 <FaLeaf />

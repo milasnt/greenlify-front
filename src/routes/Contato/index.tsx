@@ -30,7 +30,7 @@ export default function Contato() {
             </Section>
 
             <Section variant="secondary">
-                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-12 px-16 py-24 max-[900px]:grid-cols-1">
+                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-12 px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[900px]:grid-cols-1 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex flex-col gap-8">
                         <Card>
                             <h2 className="mb-8 text-[2.2rem] font-bold text-text-main">
@@ -91,12 +91,12 @@ export default function Contato() {
                             </h2>
 
                             <div className="flex flex-col gap-4">
-                                <div className="flex items-center justify-between border-b border-border pb-4 text-[1.4rem]">
+                                <div className="flex items-center justify-between border-b border-border pb-4 text-[1.4rem] max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-[0.6rem]">
                                     <span className="text-text-secondary">Segunda - Sexta</span>
                                     <span className="font-semibold text-text-main">9h - 18h</span>
                                 </div>
 
-                                <div className="flex items-center justify-between border-b border-border pb-4 text-[1.4rem]">
+                                <div className="flex items-center justify-between border-b border-border pb-4 text-[1.4rem] max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-[0.6rem]">
                                     <span className="text-text-secondary">Sábado</span>
                                     <span className="font-semibold text-text-main">9h - 13h</span>
                                 </div>

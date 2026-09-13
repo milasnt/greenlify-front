@@ -31,28 +31,28 @@ export function MissionCard({
     }
 
     return (
-        <Card className="flex h-full flex-col">
-            <div className="mb-6 flex items-center justify-between">
+        <Card className="flex h-full flex-col max-[480px]:p-[1.6rem]">
+            <div className="mb-6 flex items-center justify-between gap-[1.4rem] max-[480px]:mb-[1.6rem]">
                 {icon && (
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary max-[992px]:h-[5.5rem] max-[992px]:w-[5.5rem] max-[768px]:h-20 max-[768px]:w-20 max-[768px]:text-[2rem] max-[480px]:h-[4.6rem] max-[480px]:w-[4.6rem] max-[480px]:text-[1.8rem]">
                         {icon}
                     </div>
                 )}
 
-                <span className="rounded-full bg-green-ultra-light px-4 py-2 text-[1.2rem] font-semibold text-green-primary">
+                <span className="rounded-full bg-green-ultra-light px-4 py-2 text-[1.2rem] font-semibold text-green-primary max-[992px]:px-[1.2rem] max-[992px]:py-[0.7rem] max-[480px]:w-full max-[480px]:text-center max-[480px]:text-[1.1rem]">
                     {impacto}
                 </span>
             </div>
 
-            <h3 className="mb-4 text-[1.9rem] font-bold leading-[1.3] text-text-main">
+            <h3 className="mb-4 text-[1.9rem] font-bold leading-[1.3] text-text-main max-[480px]:text-[1.5rem]">
                 {titulo}
             </h3>
 
-            <p className="mb-6 text-[1.5rem] leading-[1.7] text-text-secondary">
+            <p className="mb-6 text-[1.5rem] leading-[1.7] text-text-secondary max-[480px]:text-[1.3rem]">
                 {descricao}
             </p>
 
-            <div className="mb-8 flex gap-10">
+            <div className="mb-8 flex gap-10 max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-[1.2rem] max-[480px]:mt-[1.6rem]">
                 <div>
                     <span className="mb-1 block text-[1.2rem] text-text-secondary">
                         Dificuldade
@@ -112,9 +112,9 @@ export function MissaoMensal({
 
     return (
         <Card>
-            <div className="mb-5 flex items-start justify-between gap-6">
+            <div className="mb-5 flex items-start justify-between gap-6 max-[480px]:gap-[1.2rem]">
                 <div>
-                    <h3 className="mb-2 text-[1.8rem] font-bold text-text-main">
+                    <h3 className="mb-2 text-[1.8rem] font-bold text-text-main max-[480px]:text-[1.5rem]">
                         {titulo}
                     </h3>
 
