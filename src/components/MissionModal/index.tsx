@@ -1,13 +1,15 @@
+import { useState } from "react";
 import type { ReactNode } from "react";
 import { FaXmark, FaLeaf, FaCircleCheck, FaStar } from "react-icons/fa6";
 import Card from "../Card";
 import Upload from "../Upload";
+import type { UploadStatus } from "../Upload";
 
 interface MissionModalProps {
     titulo: string;
     descricao: string;
     impacto: "Baixo" | "Médio" | "Alto";
-    dificuldade: "Fácil" | "Médio" | "Difícil";
+    dificuldade: "Fácil" | "Média" | "Difícil";
     pontos: number;
     xp: number;
     criteria: ReactNode;
@@ -24,13 +26,36 @@ export default function MissionModal({
     criteria,
     onClose,
 }: MissionModalProps) {
+    const [isOpen, setIsOpen] = useState(true);
+    const [uploadStatus, setUploadStatus] = useState<UploadStatus>("idle");
+    const [fileName, setFileName] = useState<string | null>(null);
+
+    function handleClose() {
+        setIsOpen(false);
+        onClose?.();
+    }
+
+    function handleSelectFile(file: File) {
+        setFileName(file.name);
+        setUploadStatus("selected");
+    }
+
+    function handleSubmitUpload() {
+        setUploadStatus("sending");
+        setTimeout(() => {
+            setUploadStatus("success");
+        }, 1500);
+    }
+
+    if (!isOpen) return null;
+
     return (
         <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/40 px-6 py-10 backdrop-blur-sm">
             <div className="relative max-h-[90vh] w-full max-w-360 overflow-y-auto rounded-4xl border border-border bg-bg p-10 shadow-custom-md">
                 
                 <button
                     type="button"
-                    onClick={onClose}
+                    onClick={handleClose}
                     className="absolute right-8 top-8 flex h-12 w-12 items-center justify-center rounded-full bg-green-ultra-light text-[1.8rem] text-green-primary transition duration-300 hover:bg-green-primary hover:text-bg"
                     aria-label="Fechar missão"
                 >
@@ -114,7 +139,12 @@ export default function MissionModal({
                     </Card>
                 </div>
 
-                <Upload/>
+                <Upload
+                    status={uploadStatus}
+                    fileName={fileName}
+                    onSelectFile={handleSelectFile}
+                    onSubmit={handleSubmitUpload}
+                />
             </div>
         </div>
     );
