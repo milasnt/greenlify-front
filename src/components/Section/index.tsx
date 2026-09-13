@@ -19,7 +19,7 @@ export default function Section({
 
     return (
         <section className={`w-full ${variantStyles[variant]} ${className}`}>
-            <div className="max-w-[140rem] mx-auto px-16 py-24">
+            <div className="max-w-[140rem] mx-auto px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                 {children}
             </div>
         </section>

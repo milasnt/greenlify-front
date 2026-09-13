@@ -126,14 +126,14 @@ export default function FAQ() {
             </Section>
 
             <Section variant="secondary">
-                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-16 px-16 py-24 max-[900px]:grid-cols-1">
+                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-16 px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[768px]:grid-cols-1 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex flex-col justify-start">
                         <div className="flex items-start gap-6">
                             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                                 1
                             </div>
                             <div>
-                                <h2 className="mb-4 text-[2.8rem] font-bold text-text-main">Perguntas sobre a SoulUp</h2>
+                                <h2 className="mb-4 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Perguntas sobre a SoulUp</h2>
                                 <p className="max-w-2xl text-[1.5rem] leading-[1.7] text-text-secondary">Perguntas frequentes sobre a SoulUp e suas funcionalidades.</p>
                             </div>
                         </div>
@@ -150,14 +150,14 @@ export default function FAQ() {
             </Section>
 
             <Section variant="primary">
-                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-16 px-16 py-24 max-[900px]:grid-cols-1">
+                <div className="mx-auto grid w-full max-w-[140rem] grid-cols-2 gap-16 px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[768px]:grid-cols-1 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex flex-col justify-start">
                         <div className="flex items-start gap-6">
                             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
                                 2
                             </div>
                             <div>
-                                <h2 className="mb-4 text-[2.8rem] font-bold text-text-main">Perguntas sobre a Greenlify</h2>
+                                <h2 className="mb-4 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">Perguntas sobre a Greenlify</h2>
                                 <p className="max-w-2xl text-[1.5rem] leading-[1.7] text-text-secondary">Perguntas frequentes sobre nossa solução.</p>
                             </div>
                         </div>
@@ -174,13 +174,13 @@ export default function FAQ() {
             </Section>
 
             <Section variant="secondary">
-                <div className="mx-auto w-full max-w-[140rem] px-16 py-24">
+                <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <Card center full>
                         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-ultra-light text-[2.4rem] text-green-primary">
                             <FaComments />
                         </div>
 
-                        <h2 className="mb-4 text-[2.8rem] font-bold text-text-main">
+                        <h2 className="mb-4 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
                             Ainda possui <span className="text-green-primary">dúvidas</span>?
                         </h2>
 

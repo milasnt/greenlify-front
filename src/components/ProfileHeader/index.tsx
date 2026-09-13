@@ -19,8 +19,8 @@ export default function ProfileHeader({
     const progress = Math.min((xp / proximoNivelXp) * 100, 100);
 
     return (
-        <Card className="flex items-center gap-10 max-[600px]:flex-col max-[600px]:text-center">
-            <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-green-ultra-light text-[3rem] font-bold text-green-primary">
+        <Card className="flex items-center gap-10 max-[992px]:items-start max-[768px]:flex-col max-[768px]:items-start max-[480px]:flex-col max-[480px]:items-start">
+            <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-green-ultra-light text-[3rem] font-bold text-green-primary max-[480px]:h-24 max-[480px]:w-24 max-[480px]:text-[2.4rem]">
                 {nome.charAt(0)}
             </div>
 
@@ -46,12 +46,12 @@ export default function ProfileHeader({
                 </div>
             </div>
 
-            <div className="min-w-32 text-center">
+            <div className="min-w-32 text-center max-[480px]:text-center">
                 <span className="block text-[1.4rem] text-text-secondary">
                     Pontos
                 </span>
 
-                <strong className="text-[2.8rem] font-bold text-green-primary">
+                <strong className="text-[2.8rem] font-bold text-green-primary max-[480px]:text-[2rem]">
                     {pontos}
                 </strong>
             </div>

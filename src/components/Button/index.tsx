@@ -29,20 +29,14 @@ export default function Button({
     };
 
     const sizeStyles = {
-        sm: "px-[2rem] py-[1rem] text-[1.3rem]",
-        md: "px-[2.8rem] py-[1.4rem] text-[1.5rem]",
-        lg: "px-[3rem] py-[1.8rem] text-[1.7rem]",
+        sm: "px-[2rem] py-[1rem] text-[1.3rem] max-[992px]:px-[2.4rem] max-[992px]:py-[1.3rem] max-[992px]:text-[1.45rem] max-[768px]:px-[2.2rem] max-[768px]:py-[1.2rem] max-[768px]:text-[1.4rem] max-[480px]:w-full max-[480px]:text-center max-[480px]:px-[1.6rem] max-[480px]:py-[1.2rem] max-[480px]:text-[1.4rem]",
+        md: "px-[2.8rem] py-[1.4rem] text-[1.5rem] max-[992px]:px-[2.4rem] max-[992px]:py-[1.3rem] max-[992px]:text-[1.45rem] max-[768px]:px-[2.2rem] max-[768px]:py-[1.2rem] max-[768px]:text-[1.4rem] max-[480px]:w-full max-[480px]:text-center max-[480px]:px-[1.6rem] max-[480px]:py-[1.2rem] max-[480px]:text-[1.4rem]",
+        lg: "px-[3rem] py-[1.8rem] text-[1.7rem] max-[992px]:px-[2.8rem] max-[992px]:py-[1.6rem] max-[768px]:px-[2.4rem] max-[768px]:py-[1.5rem] max-[768px]:text-[1.6rem] max-[480px]:w-full max-[480px]:text-center max-[480px]:px-[1.6rem] max-[480px]:py-[1.4rem] max-[480px]:text-[1.5rem]",
     };
 
     const widthStyles = full ? "w-full" : "";
 
-    const className = `
-        ${baseStyles}
-        ${variantStyles[variant]}
-        ${sizeStyles[size]}
-        ${widthStyles}
-        rounded-custom-lg
-    `;
+    const className = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${widthStyles} rounded-custom-lg`;
 
     if (href) {
         return (

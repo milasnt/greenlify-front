@@ -50,8 +50,8 @@ export default function MissionModal({
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/40 px-6 py-10 backdrop-blur-sm">
-            <div className="relative max-h-[90vh] w-full max-w-360 overflow-y-auto rounded-4xl border border-border bg-bg p-10 shadow-custom-md">
+        <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/40 px-6 py-10 backdrop-blur-sm max-[480px]:px-[1.6rem] max-[480px]:py-[2.5rem]">
+            <div className="relative max-h-[90vh] w-full max-w-360 overflow-y-auto rounded-4xl border border-border bg-bg p-10 shadow-custom-md max-[768px]:p-[1.8rem] max-[480px]:p-[1.6rem]">
                 
                 <button
                     type="button"
@@ -62,22 +62,22 @@ export default function MissionModal({
                     <FaXmark />
                 </button>
 
-                <div className="mb-10 pr-16">
-                    <div className="mb-5 flex items-center gap-3 text-[1.4rem] font-semibold text-green-primary">
+                <div className="mb-10 pr-16 max-[480px]:mb-[1.6rem] max-[480px]:pr-16">
+                    <div className="mb-5 flex items-center gap-3 text-[1.4rem] font-semibold text-green-primary max-[480px]:text-[1.3rem]">
                         <FaLeaf />
                         Missão sustentável
                     </div>
 
-                    <h2 className="mb-5 text-[3.2rem] font-bold leading-tight text-text-main">
+                    <h2 className="mb-5 text-[3.2rem] font-bold leading-tight text-text-main max-[480px]:text-[2.4rem]">
                         {titulo}
                     </h2>
 
-                    <p className="max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                    <p className="max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary max-[480px]:text-[1.4rem]">
                         {descricao}
                     </p>
                 </div>
 
-                <div className="mb-10 grid grid-cols-4 gap-5 max-[800px]:grid-cols-2 max-[500px]:grid-cols-1">
+                <div className="mb-10 grid grid-cols-4 gap-5 max-[992px]:gap-[1.6rem] max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                     <Card center>
                         <FaLeaf className="mx-auto mb-4 text-[2.5rem] text-green-primary" />
 
@@ -127,7 +127,7 @@ export default function MissionModal({
                     </Card>
                 </div>
 
-                <div className="mb-10">
+                <div className="mb-10 max-[480px]:mb-[1.6rem]">
                     <h3 className="mb-5 text-[2.2rem] font-bold text-text-main">
                         Critérios para conclusão
                     </h3>

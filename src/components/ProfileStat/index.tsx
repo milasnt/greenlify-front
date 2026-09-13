@@ -24,7 +24,7 @@ export default function ProfileStat({
                 {label}
             </span>
 
-            <strong className="mb-2 block text-[2.4rem] font-bold text-text-main">
+            <strong className="mb-2 block text-[2.4rem] font-bold text-text-main max-[768px]:text-[2.2rem] max-[480px]:text-[2rem]">
                 {value}
             </strong>
 

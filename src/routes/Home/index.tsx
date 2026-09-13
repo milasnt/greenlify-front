@@ -27,7 +27,7 @@ export default function Home() {
                 text="Uma experiência sustentável onde missões interativas transformam atitudes conscientes em evolução, recompensas e impacto positivo."
                 visual={<Dashboard />}
             >
-                <div className="flex gap-8">
+                <div className="flex gap-8 max-[992px]:gap-[1.6rem] max-[768px]:gap-[1.2rem] max-[480px]:flex-col max-[480px]:items-stretch max-[480px]:gap-4">
                     <Button size="lg">
                         <Link to="/sobre">
                             Conhecer Projeto

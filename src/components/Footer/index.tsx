@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="w-full border-t border-border bg-bg-soft">
       <div className="mx-auto max-w-[140rem] px-16 pt-20 pb-12">
         
-        <div className="grid grid-cols-[2fr_1fr_1fr] gap-24 border-b border-border pb-16">
+        <div className="grid grid-cols-[2fr_1fr_1fr] gap-24 border-b border-border pb-16 max-[992px]:grid-cols-2 max-[768px]:grid-cols-1 max-[768px]:gap-16">
 
           <div className="flex flex-col gap-8">
             <Link to="/" className="flex items-center gap-4">
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-8 pt-12">
+        <div className="flex items-center justify-between gap-8 pt-12 max-[768px]:flex-col max-[768px]:text-center">
           <p className="text-[1.4rem] text-text-muted">
             © 2026 Greenlify. Todos os direitos reservados.
           </p>
