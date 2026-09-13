@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
@@ -5,11 +6,46 @@ import Button from "../../components/Button";
 import ProfileHeader from "../../components/ProfileHeader";
 import ProfileStat from "../../components/ProfileStat";
 import RankingTabs from "../../components/RankingTabs";
+import type { RankingTab } from "../../components/RankingTabs";
 import RankingTable from "../../components/RankingTable";
 import { Link } from "react-router";
-import { FaLeaf, FaTrophy, FaStar, FaListCheck, FaFire, FaChartLine, FaUsers} from "react-icons/fa6";
+import { FaLeaf, FaTrophy, FaStar, FaListCheck, FaFire, FaChartLine, FaUsers } from "react-icons/fa6";
+
+interface RankingRow {
+    posicao: number;
+    nome: string;
+    pontos: number;
+    nivel?: string;
+}
+
+const rankingData: Record<RankingTab, RankingRow[]> = {
+    mensal: [
+        { posicao: 1, nome: "Ana Paula", pontos: 980, nivel: "Especialista" },
+        { posicao: 2, nome: "Bruno Costa", pontos: 860, nivel: "Contribuidor" },
+        { posicao: 3, nome: "Camila", pontos: 780, nivel: "Contribuidora" },
+        { posicao: 4, nome: "Diego Alves", pontos: 640, nivel: "Iniciante" },
+    ],
+    allTime: [
+        { posicao: 1, nome: "Camila", pontos: 6420, nivel: "Especialista" },
+        { posicao: 2, nome: "Ana Paula", pontos: 5890, nivel: "Especialista" },
+        { posicao: 3, nome: "Bruno Costa", pontos: 5210, nivel: "Contribuidor" },
+    ],
+    grupos: [
+        { posicao: 1, nome: "Eco Warriors", pontos: 340 },
+        { posicao: 2, nome: "Verde Vida", pontos: 290 },
+        { posicao: 3, nome: "Recicla+", pontos: 210 },
+    ],
+};
 
 export default function Perfil() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [rankingTab, setRankingTab] = useState<RankingTab>("mensal");
+
+    useEffect(() => {
+        const timer = setTimeout(() => setIsLoading(false), 800);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <>
             <Section>
@@ -44,13 +80,17 @@ export default function Perfil() {
                                 pontuação, XP, nível de contribuição e evolução.
                             </p>
 
-                            <ProfileHeader
-                                nome="Camila"
-                                nivel="Contribuidora"
-                                xp={780}
-                                proximoNivelXp={1000}
-                                pontos={1250}
-                            />
+                            {isLoading ? (
+                                <div className="h-40 w-full animate-pulse rounded-2xl border border-border bg-bg-card" />
+                            ) : (
+                                <ProfileHeader
+                                    nome="Camila"
+                                    nivel="Contribuidora"
+                                    xp={780}
+                                    proximoNivelXp={1000}
+                                    pontos={1250}
+                                />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -73,35 +113,46 @@ export default function Perfil() {
                                 missões realizadas e acompanhe sua evolução sustentável.
                             </p>
 
-                            <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
-                                <ProfileStat
-                                    icon={<FaTrophy />}
-                                    label="Pontos acumulados"
-                                    value="1.250"
-                                    descricao="Pontuação obtida nas missões."
-                                />
+                            {isLoading ? (
+                                <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                                    {[1, 2, 3, 4].map((item) => (
+                                        <div
+                                            key={item}
+                                            className="h-32 animate-pulse rounded-2xl border border-border bg-bg-card"
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-4 gap-6 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                                    <ProfileStat
+                                        icon={<FaTrophy />}
+                                        label="Pontos acumulados"
+                                        value="1.250"
+                                        descricao="Pontuação obtida nas missões."
+                                    />
 
-                                <ProfileStat
-                                    icon={<FaStar />}
-                                    label="XP acumulado"
-                                    value="780"
-                                    descricao="Experiência conquistada."
-                                />
+                                    <ProfileStat
+                                        icon={<FaStar />}
+                                        label="XP acumulado"
+                                        value="780"
+                                        descricao="Experiência conquistada."
+                                    />
 
-                                <ProfileStat
-                                    icon={<FaListCheck />}
-                                    label="Missões concluídas"
-                                    value="18"
-                                    descricao="Missões realizadas com sucesso."
-                                />
+                                    <ProfileStat
+                                        icon={<FaListCheck />}
+                                        label="Missões concluídas"
+                                        value="18"
+                                        descricao="Missões realizadas com sucesso."
+                                    />
 
-                                <ProfileStat
-                                    icon={<FaLeaf />}
-                                    label="Impacto ambiental"
-                                    value="Alto"
-                                    descricao="Impacto gerado pelas suas ações."
-                                />
-                            </div>
+                                    <ProfileStat
+                                        icon={<FaLeaf />}
+                                        label="Impacto ambiental"
+                                        value="Alto"
+                                        descricao="Impacto gerado pelas suas ações."
+                                    />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -203,12 +254,13 @@ export default function Perfil() {
                             </p>
 
                             <Card full>
-                                <RankingTabs activeTab={"mensal"} onChange={function (): void {
-                                    throw new Error("Function not implemented.");
-                                } } />
+                                <RankingTabs defaultTab={rankingTab} onChange={setRankingTab} />
 
                                 <div className="mt-8">
-                                    <RankingTable items={[]} />
+                                    <RankingTable
+                                        items={rankingData[rankingTab]}
+                                        type={rankingTab === "grupos" ? "groups" : "users"}
+                                    />
                                 </div>
                             </Card>
                         </div>

@@ -1,14 +1,25 @@
+import { useState } from "react";
+
+export type RankingTab = "mensal" | "allTime" | "grupos";
+
 interface RankingTabsProps {
-    activeTab: "mensal" | "allTime" | "grupos";
-    onChange: (tab: "mensal" | "allTime" | "grupos") => void;
+    defaultTab?: RankingTab;
+    onChange?: (tab: RankingTab) => void;
 }
 
-export default function RankingTabs({ activeTab, onChange }: RankingTabsProps) {
+export default function RankingTabs({ defaultTab = "mensal", onChange }: RankingTabsProps) {
+    const [activeTab, setActiveTab] = useState<RankingTab>(defaultTab);
+
+    function handleSelect(tab: RankingTab) {
+        setActiveTab(tab);
+        onChange?.(tab);
+    }
+
     return (
         <div className="mb-8 flex gap-2 rounded-2xl border border-border bg-bg-card p-2 max-[600px]:flex-col">
             <button
                 type="button"
-                onClick={() => onChange("mensal")}
+                onClick={() => handleSelect("mensal")}
                 className={`flex-1 rounded-xl px-6 py-4 text-[1.5rem] font-semibold transition duration-300 ${activeTab === "mensal" ? "bg-green-primary text-bg" : "text-text-secondary hover:bg-green-ultra-light hover:text-green-primary"}`}
             >
                 Mensal
@@ -16,7 +27,7 @@ export default function RankingTabs({ activeTab, onChange }: RankingTabsProps) {
 
             <button
                 type="button"
-                onClick={() => onChange("allTime")}
+                onClick={() => handleSelect("allTime")}
                 className={`flex-1 rounded-xl px-6 py-4 text-[1.5rem] font-semibold transition duration-300 ${activeTab === "allTime" ? "bg-green-primary text-bg" : "text-text-secondary hover:bg-green-ultra-light hover:text-green-primary"}`}
             >
                 All Time
@@ -24,7 +35,7 @@ export default function RankingTabs({ activeTab, onChange }: RankingTabsProps) {
 
             <button
                 type="button"
-                onClick={() => onChange("grupos")}
+                onClick={() => handleSelect("grupos")}
                 className={`flex-1 rounded-xl px-6 py-4 text-[1.5rem] font-semibold transition duration-300 ${activeTab === "grupos" ? "bg-green-primary text-bg" : "text-text-secondary hover:bg-green-ultra-light hover:text-green-primary"}`}
             >
                 Grupos
