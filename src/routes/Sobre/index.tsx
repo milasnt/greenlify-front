@@ -148,7 +148,7 @@ export default function Sobre() {
                         <p className="mx-auto mb-8 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">Explore as diferentes funcionalidades da plataforma através de demonstrações interativas.</p>
 
                         <div className="flex justify-center gap-6 max-[480px]:flex-col">
-                            <a href="/" className="rounded-xl bg-green-primary px-8 py-4 text-[1.5rem] font-semibold text-bg transition duration-300 hover:-translate-y-1">Ver Missões</a>
+                            <a href="/missoes" className="rounded-xl bg-green-primary px-8 py-4 text-[1.5rem] font-semibold text-bg transition duration-300 hover:-translate-y-1">Ver Missões</a>
                             <a href="/" className="rounded-xl border border-border px-8 py-4 text-[1.5rem] font-semibold text-text-main transition duration-300 hover:-translate-y-1">Ver Perfil</a>
                         </div>
                     </Card>

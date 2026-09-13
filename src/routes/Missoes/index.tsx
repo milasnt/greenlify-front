@@ -1,8 +1,106 @@
+import { useEffect, useState } from "react";
 import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import { MissionCard, MissaoMensal } from "../../components/MissionCard";
-import { FaCircleCheck, FaLeaf, FaListCheck } from "react-icons/fa6";
-import MissionModal from "../../components/MissionModal";
+import { FaLeaf, FaListCheck } from "react-icons/fa6";
+
+export interface Missao {
+    id: string;
+    titulo: string;
+    descricao: string;
+    impacto: "Baixo" | "Médio" | "Alto";
+    dificuldade: "Fácil" | "Média" | "Difícil";
+    pontos: number;
+    xp: number;
+    criterios: string[];
+}
+
+export const missoes: Missao[] = [
+    {
+        id: "separar-materiais-reciclaveis",
+        titulo: "Separar materiais recicláveis",
+        descricao: "Separe materiais recicláveis e organize-os corretamente para descarte.",
+        impacto: "Médio",
+        dificuldade: "Fácil",
+        pontos: 40,
+        xp: 30,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+    {
+        id: "utilizar-alternativa-reutilizavel",
+        titulo: "Utilizar uma alternativa reutilizável",
+        descricao: "Substitua um produto descartável por uma alternativa reutilizável durante sua rotina.",
+        impacto: "Baixo",
+        dificuldade: "Fácil",
+        pontos: 30,
+        xp: 20,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+    {
+        id: "levar-residuos-ponto-coleta",
+        titulo: "Levar resíduos a um ponto de coleta",
+        descricao: "Leve materiais recicláveis ou resíduos específicos a um ponto de coleta adequado.",
+        impacto: "Alto",
+        dificuldade: "Média",
+        pontos: 70,
+        xp: 50,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+    {
+        id: "reutilizar-embalagem",
+        titulo: "Reutilizar uma embalagem",
+        descricao: "Dê uma nova utilidade a uma embalagem que seria descartada.",
+        impacto: "Médio",
+        dificuldade: "Fácil",
+        pontos: 40,
+        xp: 30,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+    {
+        id: "compra-consciente",
+        titulo: "Realizar uma compra consciente",
+        descricao: "Escolha uma alternativa de compra que reduza o uso de materiais descartáveis.",
+        impacto: "Médio",
+        dificuldade: "Média",
+        pontos: 50,
+        xp: 40,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+    {
+        id: "acao-de-reciclagem",
+        titulo: "Participar de uma ação de reciclagem",
+        descricao: "Participe de uma ação relacionada à coleta, separação ou reciclagem de resíduos.",
+        impacto: "Alto",
+        dificuldade: "Difícil",
+        pontos: 90,
+        xp: 70,
+        criterios: [
+            "A ação deve ser realizada pelo próprio usuário.",
+            "O vídeo deve mostrar claramente a realização da ação.",
+            "O conteúdo enviado deve corresponder à missão selecionada.",
+        ],
+    },
+];
 
 const missoesMensais = [
     {
@@ -27,58 +125,14 @@ const missoesMensais = [
     },
 ];
 
-const missoes = [
-    {
-        titulo: "Separar materiais recicláveis",
-        descricao: "Separe materiais recicláveis e organize-os corretamente para descarte.",
-        impacto: "Médio" as const,
-        dificuldade: "Fácil" as const,
-        pontos: 40,
-        xp: 30,
-    },
-    {
-        titulo: "Utilizar uma alternativa reutilizável",
-        descricao: "Substitua um produto descartável por uma alternativa reutilizável durante sua rotina.",
-        impacto: "Baixo" as const,
-        dificuldade: "Fácil" as const,
-        pontos: 30,
-        xp: 20,
-    },
-    {
-        titulo: "Levar resíduos a um ponto de coleta",
-        descricao: "Leve materiais recicláveis ou resíduos específicos a um ponto de coleta adequado.",
-        impacto: "Alto" as const,
-        dificuldade: "Média" as const,
-        pontos: 70,
-        xp: 50,
-    },
-    {
-        titulo: "Reutilizar uma embalagem",
-        descricao: "Dê uma nova utilidade a uma embalagem que seria descartada.",
-        impacto: "Médio" as const,
-        dificuldade: "Fácil" as const,
-        pontos: 40,
-        xp: 30,
-    },
-    {
-        titulo: "Realizar uma compra consciente",
-        descricao: "Escolha uma alternativa de compra que reduza o uso de materiais descartáveis.",
-        impacto: "Médio" as const,
-        dificuldade: "Média" as const,
-        pontos: 50,
-        xp: 40,
-    },
-    {
-        titulo: "Participar de uma ação de reciclagem",
-        descricao: "Participe de uma ação relacionada à coleta, separação ou reciclagem de resíduos.",
-        impacto: "Alto" as const,
-        dificuldade: "Difícil" as const,
-        pontos: 90,
-        xp: 70,
-    },
-];
-
 export default function Missoes() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setIsLoading(false), 800);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <>
             <Section>
@@ -144,19 +198,31 @@ export default function Missoes() {
                                 acumular pontos e XP e contribuir para suas metas mensais.
                             </p>
 
-                            <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
-                                {missoes.map((missao) => (
-                                    <MissionCard
-                                        key={missao.titulo}
-                                        titulo={missao.titulo}
-                                        descricao={missao.descricao}
-                                        impacto={missao.impacto}
-                                        dificuldade={missao.dificuldade}
-                                        pontos={missao.pontos}
-                                        xp={missao.xp}
-                                    />
-                                ))}
-                            </div>
+                            {isLoading ? (
+                                <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
+                                    {[1, 2, 3, 4, 5, 6].map((item) => (
+                                        <div
+                                            key={item}
+                                            className="h-80 animate-pulse rounded-2xl border border-border bg-bg-card"
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-3 gap-6 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
+                                    {missoes.map((missao) => (
+                                        <MissionCard
+                                            key={missao.id}
+                                            id={missao.id}
+                                            titulo={missao.titulo}
+                                            descricao={missao.descricao}
+                                            impacto={missao.impacto}
+                                            dificuldade={missao.dificuldade}
+                                            pontos={missao.pontos}
+                                            xp={missao.xp}
+                                        />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -249,39 +315,6 @@ export default function Missoes() {
                         </div>
                     </div>
                 </div>
-
-                <MissionModal
-    titulo="Separar materiais recicláveis"
-    descricao="Separe materiais recicláveis e organize-os corretamente para facilitar o processo de reciclagem."
-    impacto="Médio"
-    dificuldade="Fácil"
-    pontos={40}
-    xp={30}
-    criteria={
-        <>
-            <div className="flex items-start gap-4">
-                <FaCircleCheck className="mt-1 shrink-0 text-green-primary" />
-                <p className="text-[1.5rem] leading-[1.6] text-text-secondary">
-                    A ação deve ser realizada pelo próprio usuário.
-                </p>
-            </div>
-
-            <div className="flex items-start gap-4">
-                <FaCircleCheck className="mt-1 shrink-0 text-green-primary" />
-                <p className="text-[1.5rem] leading-[1.6] text-text-secondary">
-                    O vídeo deve mostrar claramente a realização da ação.
-                </p>
-            </div>
-
-            <div className="flex items-start gap-4">
-                <FaCircleCheck className="mt-1 shrink-0 text-green-primary" />
-                <p className="text-[1.5rem] leading-[1.6] text-text-secondary">
-                    O conteúdo enviado deve corresponder à missão selecionada.
-                </p>
-            </div>
-        </>
-    }
-/>
             </Section>
         </>
     );
