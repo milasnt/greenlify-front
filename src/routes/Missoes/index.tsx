@@ -184,7 +184,7 @@ export default function Missoes() {
                 </div>
             </Section>
 
-            <Section>
+            <Section variant="secondary">
                 <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
