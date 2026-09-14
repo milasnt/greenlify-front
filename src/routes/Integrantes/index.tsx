@@ -5,7 +5,6 @@ import { FaUserGroup, FaShieldHeart } from "react-icons/fa6";
 import Card from "../../components/Card";
 
 import imgCamila from "../../assets/img/integrantes/img-camila.jpeg";
-import imgChristian from "../../assets/img/integrantes/img-christian.jpeg";
 import imgLucas from "../../assets/img/integrantes/img-lucas.jpeg";
 import imgEnzo from "../../assets/img/integrantes/img-enzo.jpeg";
 import imgSophia from "../../assets/img/integrantes/img-sophia.jpeg";
@@ -30,15 +29,6 @@ export default function Integrantes() {
             foto: imgCamila,
             linkedin: "https://www.linkedin.com/in/camila-souza-52164a3a5/",
             github: "https://github.com/milasnt",
-        },
-        {
-            nome: "Christian Pereira",
-            cargo: "Analista de Negócios",
-            rm: "571586",
-            turma: "1TDSPJ",
-            foto: imgChristian,
-            linkedin: "https://www.linkedin.com/in/christian-rodrigues-b756263b8/",
-            github: "https://github.com/Ch-Rodrigues",
         },
         {
             nome: "Lucas Marti Zapater",
@@ -81,7 +71,7 @@ export default function Integrantes() {
             </Section>
 
             <Section>
-                <div className="grid grid-cols-5 gap-8 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
+                <div className="grid grid-cols-4 gap-8 max-[992px]:grid-cols-2 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                     {integrantes.map((integrante) => (
                         <Card key={integrante.rm} member>
                             <div className="mx-auto mb-8 h-48 w-48 overflow-hidden rounded-full border-3 border-green-ultra-light shadow-custom-sm max-[992px]:h-72 max-[992px]:w-72 max-[768px]:h-64 max-[768px]:w-64 max-[480px]:h-56 max-[480px]:w-56">
