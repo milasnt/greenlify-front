@@ -79,6 +79,12 @@ export default function Footer() {
               </li>
 
               <li>
+                <Link to="/nossasolucao" className="text-[1.5rem] text-text-secondary transition duration-300 hover:text-green-primary">
+                  Nossa Solução
+                </Link>
+              </li>
+
+              <li>
                 <Link to="/integrantes" className="text-[1.5rem] text-text-secondary transition duration-300 hover:text-green-primary">
                   Integrantes
                 </Link>
