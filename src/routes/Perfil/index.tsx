@@ -287,7 +287,7 @@ export default function Perfil() {
                             </p>
 
                             <Card full>
-                                <div className="grid grid-cols-3 gap-10 max-[992px]:gap-[2.5rem] max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
+                                <div className="grid grid-cols-3 gap-10 max-[992px]:gap-10 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                     <div>
                                         <span className="mb-2 block text-[1.4rem] text-text-secondary">
                                             Pontos no mês
@@ -343,13 +343,13 @@ export default function Perfil() {
                         </p>
 
                         <div className="flex justify-center gap-6 max-[480px]:flex-col">
-                            <Link to="/nossa-solucao/missoes">
+                            <Link to="/missoes">
                                 <Button size="lg">
                                     Ver Missões
                                 </Button>
                             </Link>
 
-                            <Link to="/nossa-solucao">
+                            <Link to="/nossasolucao">
                                 <Button variant="secondary" size="lg">
                                     Conhecer a solução
                                 </Button>
