@@ -274,12 +274,12 @@ Para executar o projeto localmente, é necessário ter instalado:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/milasnt/gs-recultiva.git
+git clone https://github.com/milasnt/greenlify-front.git
 ```
 Acesse a pasta do projeto:
 
 ```bash
-cd gs-recultiva
+cd greenlify-front
 ```
 
 Instale as dependências:
@@ -383,7 +383,7 @@ http://localhost:5173
 ### 📁 Repositório do GitHub
 
 <p>
-  <a href="https://github.com/milasnt/gs-recultiva">
+  <a href="https://github.com/milasnt/greenlify-front">
     🔗<strong>Acessar o repositório do projeto</strong>
   </a>
 </p>
