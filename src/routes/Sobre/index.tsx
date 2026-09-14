@@ -2,6 +2,8 @@ import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
 import Roadmap from "../../components/Roadmap";
+import imgFiap from "../../assets/img/sobre/img-fiap.jpeg";
+import imgSoulup from "../../assets/img/sobre/img-soulup.png";
 import { FaSeedling, FaLeaf, FaRobot, FaChartLine, FaUsers, FaTrophy, FaCode, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
 
@@ -32,12 +34,16 @@ export default function Sobre() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-8 max-[768px]:grid-cols-1">
-                            <Card className="flex items-center justify-center p-8">
-                                <img src="/img/img-fiap.jpeg" alt="FIAP" className="h-full w-full rounded-xl object-cover" />
-                            </Card>
-                            <Card className="flex items-center justify-center p-8">
-                                <img src="/img/img-soulup.png" alt="SoulUp" className="h-full w-full rounded-xl object-cover" />
-                            </Card>
+                        <Card className="flex items-center justify-center p-8">
+                            <div className="flex h-72 w-full items-center justify-center overflow-hidden rounded-xl">
+                                <img src={imgFiap} alt="FIAP" className="h-full w-full object-contain"/>
+                            </div>
+                        </Card>
+                        <Card className="flex items-center justify-center p-8">
+                            <div className="flex h-72 w-full items-center justify-center overflow-hidden rounded-xl">
+                                <img src={imgSoulup} alt="SoulUp" className="h-full w-full object-contain"/>
+                            </div>
+                        </Card>
                         </div>
                     </div>
                 </div>
