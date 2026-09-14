@@ -3,6 +3,9 @@ import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import { MissionCard, MissaoMensal } from "../../components/MissionCard";
 import { FaLeaf, FaListCheck } from "react-icons/fa6";
+import Card from "../../components/Card";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 
 export interface Missao {
     id: string;
@@ -181,7 +184,7 @@ export default function Missoes() {
                 </div>
             </Section>
 
-            <Section>
+            <Section variant="secondary">
                 <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
                     <div className="flex items-start gap-8">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
@@ -228,92 +231,32 @@ export default function Missoes() {
                 </div>
             </Section>
 
-            <Section variant="primary">
+            <Section>
                 <div className="mx-auto w-full max-w-[140rem] px-16 py-24 max-[992px]:px-12 max-[992px]:py-20 max-[480px]:px-[1.6rem] max-[480px]:py-12">
-                    <div className="flex items-start gap-8">
-                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-green-ultra-light text-[2rem] font-bold text-green-primary">
-                            3
+                    <Card center full>
+                        <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
+                            Acompanhe sua <span className="text-green-primary">evolução</span>
+                        </h2>
+
+                        <p className="mx-auto mb-10 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
+                            Acesse seu perfil para acompanhar seus pontos, XP, conquistas,
+                            nível de contribuição e posição nos rankings.
+                        </p>
+
+                        <div className="flex justify-center gap-6 max-[480px]:flex-col">
+                            <Link to="/perfil">
+                                <Button size="lg">
+                                    Ver meu perfil
+                                </Button>
+                            </Link>
+
+                            <Link to="/nossasolucao">
+                                <Button variant="secondary" size="lg">
+                                    Conhecer a solução
+                                </Button>
+                            </Link>
                         </div>
-
-                        <div className="w-full">
-                            <h2 className="mb-6 text-[2.8rem] font-bold text-text-main max-[992px]:text-[2.6rem] max-[480px]:text-[2rem]">
-                                Como funciona uma missão
-                            </h2>
-
-                            <p className="mb-12 max-w-280 text-[1.6rem] leading-[1.7] text-text-secondary">
-                                O usuário escolhe uma missão contínua, realiza a ação e envia
-                                um vídeo como comprovação. Após a validação, os pontos e o XP
-                                são adicionados ao seu perfil e também contribuem para o
-                                progresso das metas mensais.
-                            </p>
-
-                            <div className="grid grid-cols-4 gap-6 max-[992px]:grid-cols-3 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
-                                <div className="rounded-2xl border border-border bg-bg-card p-8 text-center shadow-custom-sm">
-                                    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light">
-                                        <span className="text-[1.8rem] font-bold text-green-primary">
-                                            1
-                                        </span>
-                                    </div>
-
-                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
-                                        Escolha
-                                    </h3>
-
-                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
-                                        Escolha uma missão disponível na plataforma.
-                                    </p>
-                                </div>
-
-                                <div className="rounded-2xl border border-border bg-bg-card p-8 text-center shadow-custom-sm">
-                                    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light">
-                                        <span className="text-[1.8rem] font-bold text-green-primary">
-                                            2
-                                        </span>
-                                    </div>
-
-                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
-                                        Realize
-                                    </h3>
-
-                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
-                                        Realize a ação sustentável seguindo os critérios da missão.
-                                    </p>
-                                </div>
-
-                                <div className="rounded-2xl border border-border bg-bg-card p-8 text-center shadow-custom-sm">
-                                    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light">
-                                        <span className="text-[1.8rem] font-bold text-green-primary">
-                                            3
-                                        </span>
-                                    </div>
-
-                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
-                                        Comprove
-                                    </h3>
-
-                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
-                                        Envie um vídeo para comprovar a realização da ação.
-                                    </p>
-                                </div>
-
-                                <div className="rounded-2xl border border-border bg-bg-card p-8 text-center shadow-custom-sm">
-                                    <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-ultra-light">
-                                        <span className="text-[1.8rem] font-bold text-green-primary">
-                                            4
-                                        </span>
-                                    </div>
-
-                                    <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">
-                                        Receba
-                                    </h3>
-
-                                    <p className="text-[1.5rem] leading-[1.7] text-text-secondary">
-                                        Após a validação, receba pontos e XP pelo seu desempenho.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </Card>
                 </div>
             </Section>
         </>

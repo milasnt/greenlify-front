@@ -35,7 +35,7 @@ export default function Home() {
                     </Button>
 
                     <Button variant="secondary" size="lg">
-                        <Link to="/">
+                        <Link to="/nossasolucao">
                             Testar Interface
                         </Link>
                     </Button>
