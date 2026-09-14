@@ -9,7 +9,7 @@ import RankingTabs from "../../components/RankingTabs";
 import type { RankingTab } from "../../components/RankingTabs";
 import RankingTable from "../../components/RankingTable";
 import { Link } from "react-router";
-import { FaLeaf, FaTrophy, FaStar, FaListCheck, FaFire, FaChartLine, FaUsers } from "react-icons/fa6";
+import { FaLeaf, FaTrophy, FaStar, FaListCheck, FaFire, FaChartLine, FaUsers, FaCircleCheck } from "react-icons/fa6";
 
 interface RankingRow {
     posicao: number;
@@ -40,6 +40,11 @@ const rankingData: Record<RankingTab, RankingRow[]> = {
 export default function Perfil() {
     const [isLoading, setIsLoading] = useState(true);
     const [rankingTab, setRankingTab] = useState<RankingTab>("mensal");
+    const [isShared, setIsShared] = useState(false);
+
+    function handleShare() {
+        setIsShared(true);
+    }
 
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 800);
@@ -320,9 +325,16 @@ export default function Perfil() {
                                 </div>
 
                                 <div className="mt-10 flex justify-center">
-                                    <Button variant="secondary" size="md">
-                                        Compartilhar resumo
-                                    </Button>
+                                    {isShared ? (
+                                        <span className="flex items-center gap-3 text-[1.5rem] font-semibold text-green-primary">
+                                            <FaCircleCheck />
+                                            Compartilhado com sucesso!
+                                        </span>
+                                    ) : (
+                                        <Button variant="secondary" size="md" onClick={handleShare}>
+                                            Compartilhar resumo
+                                        </Button>
+                                    )}
                                 </div>
                             </Card>
                         </div>
