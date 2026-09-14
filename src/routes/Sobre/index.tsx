@@ -2,8 +2,10 @@ import Section from "../../components/Section";
 import Hero from "../../components/Hero";
 import Card from "../../components/Card";
 import Roadmap from "../../components/Roadmap";
-import { FaSeedling, FaLeaf, FaRobot, FaChartLine, FaUsers, FaTrophy, FaCode, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
-import { FaListCheck } from "react-icons/fa6";
+import imgFiap from "../../assets/img/sobre/img-fiap.jpeg";
+import imgSoulup from "../../assets/img/sobre/img-soulup.png";
+import { FaSeedling, FaLeaf, FaRobot, FaChartLine, FaUsers, FaTrophy, FaCode, FaCss3Alt } from "react-icons/fa";
+import { FaBolt, FaListCheck, FaReact } from "react-icons/fa6";
 
 export default function Sobre() {
     return (
@@ -32,12 +34,16 @@ export default function Sobre() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-8 max-[768px]:grid-cols-1">
-                            <Card className="flex items-center justify-center p-8">
-                                <img src="/img/img-fiap.jpeg" alt="FIAP" className="h-full w-full rounded-xl object-cover" />
-                            </Card>
-                            <Card className="flex items-center justify-center p-8">
-                                <img src="/img/img-soulup.png" alt="SoulUp" className="h-full w-full rounded-xl object-cover" />
-                            </Card>
+                        <Card className="flex items-center justify-center p-8">
+                            <div className="flex h-72 w-full items-center justify-center overflow-hidden rounded-xl">
+                                <img src={imgFiap} alt="FIAP" className="h-full w-full object-contain"/>
+                            </div>
+                        </Card>
+                        <Card className="flex items-center justify-center p-8">
+                            <div className="flex h-72 w-full items-center justify-center overflow-hidden rounded-xl">
+                                <img src={imgSoulup} alt="SoulUp" className="h-full w-full object-contain"/>
+                            </div>
+                        </Card>
                         </div>
                     </div>
                 </div>
@@ -175,27 +181,27 @@ export default function Sobre() {
 
                                     <div className="grid grid-cols-2 gap-6 max-[768px]:grid-cols-2 max-[480px]:grid-cols-1">
                                         <Card center>
+                                            <FaReact className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
+                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">React</h3>
+                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Desenvolvimento da interface e criação de componentes reutilizáveis para a aplicação.</p>
+                                        </Card>
+
+                                        <Card center>
+                                            <FaBolt className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
+                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">Vite</h3>
+                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Ferramenta utilizada para configuração do projeto, desenvolvimento e build da aplicação.</p>
+                                        </Card>
+
+                                        <Card center>
                                             <FaCode className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
-                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">HTML</h3>
-                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Estruturação semântica e organização do conteúdo das páginas web.</p>
+                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">TypeScript</h3>
+                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Tipagem dos componentes, propriedades, dados e funcionalidades da aplicação.</p>
                                         </Card>
 
                                         <Card center>
                                             <FaCss3Alt className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
-                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">CSS</h3>
-                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Estilização moderna, responsividade e criação de interfaces intuitivas.</p>
-                                        </Card>
-
-                                        <Card center>
-                                            <FaJs className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
-                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">JavaScript</h3>
-                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Interatividade, validações e funcionalidades dinâmicas.</p>
-                                        </Card>
-
-                                        <Card center>
-                                            <FaGithub className="mx-auto mb-5 text-[2.8rem] text-green-primary" />
-                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">Git & GitHub</h3>
-                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Controle de versão, colaboração em equipe e gerenciamento do projeto.</p>
+                                            <h3 className="mb-3 text-[1.8rem] font-bold text-text-main">Tailwind CSS</h3>
+                                            <p className="text-[1.5rem] leading-[1.7] text-text-secondary">Estilização da interface, criação do layout e desenvolvimento responsivo das páginas.</p>
                                         </Card>
                                     </div>
                                 </div>
